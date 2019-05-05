@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <style>
+    <!-- <style>
         .input-field label {
             color: #e91e63;
         }
@@ -23,7 +23,15 @@
             border-bottom: 1px solid #e91e63 !important;
             box-shadow: 0 1px 0 0 #e91e63 !important
         }
-    </style>
+
+        [type="radio"]:checked+span:after{
+            border: 2px solid #e91e63;
+        }
+
+        [type="radio"]:checked+span:after{
+            background-color: #e91e63;
+        }
+    </style> -->
 </head>
 
 <body class="container">
@@ -38,13 +46,13 @@
 
 
         <form action="/api/friends" method="POST">
-     
+
             <div class="input-field">
-                <input id="name" name="name" type="text" autocomplete="off">
+                <input id="name" name="name" type="text" autocomplete="off" required="true">
                 <label for="name">Name(Required)</label>
             </div>
             <div class="input-field">
-                <input id="photo" name="photo" type="text" autocomplete="off">
+                <input id="photo" name="photo" type="text" autocomplete="off" required="true">
                 <label for="photo">Link to Photo Image(Required)</label>
             </div>
 
@@ -64,7 +72,7 @@
                 <div class="col s4">1. Your mind is always buzzing with unexplored ideas and plans.</div>
                 <div class="col s1">
                     <label>
-                        <input name="group1" type="radio" value="1" />
+                        <input name="group1" type="radio" value="1" required/>
                         <span></span>
                     </label>
                 </div>
@@ -98,7 +106,7 @@
                 <div class="col s4">2. Generally speaking, you rely more on your experience than your imagination.</div>
                 <div class="col s1">
                     <label>
-                        <input name="group2" type="radio" value="1" />
+                        <input name="group2" type="radio" value="1" required/>
                         <span></span>
                     </label>
                 </div>
@@ -133,7 +141,7 @@
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group3" type="radio" value="1" />
+                        <input name="group3" type="radio" value="1" required/>
                         <span></span>
                     </label>
                 </div>
@@ -167,31 +175,31 @@
                 <div class="col s4">4. You rarely do something just out of sheer curiosity.</div>
                 <div class="col s1">
                     <label>
-                        <input name="group4" type="radio" />
+                        <input name="group4" type="radio" value="1" required/>
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group4" type="radio" />
+                        <input name="group4" type="radio" value="2" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group4" type="radio" />
+                        <input name="group4" type="radio" value="3" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group4" type="radio" />
+                        <input name="group4" type="radio" value="4" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group4" type="radio" />
+                        <input name="group4" type="radio" value="5" />
                         <span></span>
                     </label>
                 </div>
@@ -201,31 +209,31 @@
                 <div class="col s4">5. People can rarely upset you.</div>
                 <div class="col s1">
                     <label>
-                        <input name="group5" type="radio" />
+                        <input name="group5" type="radio" value="1" required/>
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group5" type="radio" />
+                        <input name="group5" type="radio" value="2" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group5" type="radio" />
+                        <input name="group5" type="radio" value="3" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group5" type="radio" />
+                        <input name="group5" type="radio" value="4" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group5" type="radio" />
+                        <input name="group5" type="radio" value="5" />
                         <span></span>
                     </label>
                 </div>
@@ -235,40 +243,40 @@
                 <div class="col s4">6. It is often difficult for you to relate to other people’s feelings.</div>
                 <div class="col s1">
                     <label>
-                        <input name="group6" type="radio" />
+                        <input name="group6" type="radio" value="1" required/>
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group6" type="radio" />
+                        <input name="group6" type="radio" value="2" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group6" type="radio" />
+                        <input name="group6" type="radio" value="3" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group6" type="radio" />
+                        <input name="group6" type="radio" value="4" />
                         <span></span>
                     </label>
                 </div>
                 <div class="col s1">
                     <label>
-                        <input name="group6" type="radio" />
+                        <input name="group6" type="radio" value="5" />
                         <span></span>
                     </label>
                 </div>
 
             </div>
 
-            
+
             <button id="submit" type="submit" class="waves-effect waves-light btn pink">Submit</button>
-            
+
 
         </form>
 
