@@ -7,6 +7,7 @@ router.get("/friends",(req,res)=>{
     res.send("get");
 });
 router.post("/friends",(req,res)=>{
+    console.log(req.body);
     res.send("post")
 })
 
