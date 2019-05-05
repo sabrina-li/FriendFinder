@@ -282,25 +282,7 @@
 
         </form>
 
-        <div id="result-popup" class="modal">
-                <div class="row">
-                        <div class="col s12 m7">
-                          <div class="card">
-                            <div class="card-image">
-                              <img src="images/sample-1.jpg">
-                              <span class="card-title">Card Title</span>
-                            </div>
-                            <div class="card-content">
-                              <p>I am a very simple card. I am good at containing small bits of information.
-                              I am convenient because I require little markup to use effectively.</p>
-                            </div>
-                            <div class="card-action">
-                              <a href="#">This is a link</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-        </div>
+        <div id="result-popup" class="modal"></div>
 
     </main>
     <footer>
@@ -309,23 +291,46 @@
             href="https://github.com/sabrina-li/FriendFinder">GitHub Repo</a>
     </footer>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script    src="https://code.jquery.com/jquery-3.4.1.min.js"    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="    crossorigin="anonymous"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script> 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            var elem= document.querySelector('.modal');
-            var instance = M.Modal.init(elem);
-            instance.open();
-
+            
 
             $('#questions-form').ajaxForm(function(res) { 
                 console.log(JSON.stringify(res))
+                const elem= $('.modal');
+                elem.empty();
+                const card = $(`
+                <div >
+                    <h4 class="header">Match Found! Name: ${res.name}</h4>
+                    <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="${res.photo}">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                        <p></p>
+                        </div>
+                        <div class="card-action">
+                        <a href="#"></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                          `);
+                elem.append(card)
+                
+                // const instance = M.Modal.init(elem);
+                // instance.open();
+                $('.modal').modal();
+                $('#result-popup').modal('open');
             }); 
         });
 
-        
     </script>
 </body>
 
