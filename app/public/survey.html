@@ -1,12 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
-<body>
-    survey
+
+<body class="container">
+    <header>
+        <h3 style="width:100%">Survey Questions</h3>
+
+    </header>
+    <main>
+        <h5>About You</h5>
+
+        <form>
+            <h6>Name:</h6>
+            <input type="text" id="name-input" style="height:2rem;">
+            <label for="name-input">(Required)</label>
+            <br>
+            <h6>Link to Photo Image:</h6>
+            <input type="text" id="photo-input" style="height:2rem;">
+            <label for="photo-input">(Required)</label>
+            <br>
+            <br>
+            <h5>Questionnaire</h5>
+
+            <div class="row">
+                <div class="col s4">Strongly Disagree</div>
+                <div class="col s1" style="padding-left:17px;">1</div>
+                <div class="col s1" style="padding-left:17px;">2</div>
+                <div class="col s1" style="padding-left:17px;">3</div>
+                <div class="col s1" style="padding-left:17px;">4</div>
+                <div class="col s1" style="padding-left:17px;">5</div>
+                <div class="col s3" style="padding-left:17px;">Strongly Agree</div>
+            </div>
+
+            <div class="row">
+                <div class="col s4">1. Your mind is always buzzing with unexplored ideas and plans.</div>
+                <div class="col s1">
+                    <label>
+                        <input name="group1" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group1" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span></span>
+                        </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group1" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group1" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col s4">2. Generally speaking, you rely more on your experience than your imagination.</div>
+                <div class="col s1">
+                    <label>
+                        <input name="group2" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group2" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                        <label>
+                            <input name="group2" type="radio" />
+                            <span></span>
+                        </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group2" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group2" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col s4">3. You find it easy to stay relaxed and focused even when there is some pressure.</div>
+                <div class="col s1">
+                    <label>
+                        <input name="group3" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group3" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                        <label>
+                            <input name="group3" type="radio" />
+                            <span></span>
+                        </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group3" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group3" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col s4">4. You rarely do something just out of sheer curiosity.</div>
+                <div class="col s1">
+                    <label>
+                        <input name="group4" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group4" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                        <label>
+                            <input name="group4" type="radio" />
+                            <span></span>
+                        </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group4" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group4" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col s4">5. People can rarely upset you.</div>
+                <div class="col s1">
+                    <label>
+                        <input name="group5" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group5" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                        <label>
+                            <input name="group5" type="radio" />
+                            <span></span>
+                        </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group5" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group5" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col s4">6. It is often difficult for you to relate to other people’s feelings.</div>
+                <div class="col s1">
+                    <label>
+                        <input name="group6" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group6" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                        <label>
+                            <input name="group6" type="radio" />
+                            <span></span>
+                        </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group6" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+                <div class="col s1">
+                    <label>
+                        <input name="group6" type="radio" />
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+
+
+
+        <button id="submit" type="submit" class="waves-effect waves-light btn pink">Submit</button>
+
+
+        </form>
+
+    </main>
+    <footer>
+        <br>
+        <a href="/api/friends" style="cursor:pointer"> API Friends List</a> | <a style="cursor:pointer"
+            href="https://github.com/sabrina-li/FriendFinder">GitHub Repo</a>
+    </footer>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        document.querySelector('#survey').addEventListener("click", function () {
+            window.location.href = '/survey';
+        })
+    </script>
 </body>
+
 </html>
