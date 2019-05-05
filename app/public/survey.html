@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- <style>
+    <style>
         .input-field label {
             color: #e91e63;
         }
@@ -31,7 +31,9 @@
         [type="radio"]:checked+span:after{
             background-color: #e91e63;
         }
-    </style> -->
+
+        
+    </style>
 </head>
 
 <body class="container">
@@ -45,7 +47,7 @@
 
 
 
-        <form action="/api/friends" method="POST">
+        <form id="questions-form"  action="/api/friends" method="POST">
 
             <div class="input-field">
                 <input id="name" name="name" type="text" autocomplete="off" required="true">
@@ -280,6 +282,26 @@
 
         </form>
 
+        <div id="result-popup" class="modal">
+                <div class="row">
+                        <div class="col s12 m7">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="images/sample-1.jpg">
+                              <span class="card-title">Card Title</span>
+                            </div>
+                            <div class="card-content">
+                              <p>I am a very simple card. I am good at containing small bits of information.
+                              I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="#">This is a link</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        </div>
+
     </main>
     <footer>
         <br>
@@ -289,10 +311,21 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script    src="https://code.jquery.com/jquery-3.4.1.min.js"    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="    crossorigin="anonymous"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
     <script type="text/javascript">
-        document.querySelector('#survey').addEventListener("click", function () {
-            window.location.href = '/survey';
-        })
+        document.addEventListener('DOMContentLoaded', function() {
+            var elem= document.querySelector('.modal');
+            var instance = M.Modal.init(elem);
+            instance.open();
+
+
+            $('#questions-form').ajaxForm(function(res) { 
+                console.log(JSON.stringify(res))
+            }); 
+        });
+
+        
     </script>
 </body>
 
