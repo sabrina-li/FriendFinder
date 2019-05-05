@@ -2,7 +2,7 @@ var friendsData =
 [
     {
         "name": "Ahmed",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
+        "photo": "https://cdn.eso.org/images/screen/eso1907a.jpg",
         "scores": ["5","1","4","4","5","1"]
     }
 ]

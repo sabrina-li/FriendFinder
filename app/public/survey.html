@@ -31,7 +31,10 @@
         [type="radio"]:checked+span:after{
             background-color: #e91e63;
         }
-
+        .header{
+            text-align: center;
+            padding: 10px;
+        }
         
     </style>
 </head>
@@ -43,10 +46,7 @@
     </header>
     <main>
         <h5>About You</h5>
-
-
-
-
+        <p>All information will be made public</p>
         <form id="questions-form"  action="/api/friends" method="POST">
 
             <div class="input-field">
@@ -54,8 +54,12 @@
                 <label for="name">Name(Required)</label>
             </div>
             <div class="input-field">
-                <input id="photo" name="photo" type="text" autocomplete="off" required="true">
-                <label for="photo">Link to Photo Image(Required)</label>
+                <input id="photo" name="photo" type="text" autocomplete="off">
+                <label for="photo">Link to Photo Image(Optional)</label>
+            </div>
+            <div class="input-field">
+                <input id="fb" name="fb" type="text" autocomplete="off">
+                <label for="fb">Link to Facebook(Optional)</label>
             </div>
 
             <h5>Questionnaire</h5>
@@ -301,31 +305,26 @@
             
 
             $('#questions-form').ajaxForm(function(res) { 
-                console.log(JSON.stringify(res))
-                const elem= $('.modal');
-                elem.empty();
+                $('.modal').empty();
                 const card = $(`
                 <div >
                     <h4 class="header">Match Found! Name: ${res.name}</h4>
-                    <div class="card horizontal">
+                    <div class="card">
                     <div class="card-image">
-                        <img src="${res.photo}">
+                        <h5>${res.photo?"Photo:":"Photo not uploaded"}</h5>
+                        <img src="${res.photo}" style="max-height:300px;width:auto;">
                     </div>
                     <div class="card-stacked">
-                        <div class="card-content">
-                        <p></p>
-                        </div>
                         <div class="card-action">
-                        <a href="#"></a>
+                            ${res.fb?"<a href="+res.fb+">Facebook Link</a>":"No Facebook Found"}
                         </div>
                     </div>
                     </div>
                 </div>
                           `);
-                elem.append(card)
-                
-                // const instance = M.Modal.init(elem);
-                // instance.open();
+
+                $('.modal').append(card)
+  
                 $('.modal').modal();
                 $('#result-popup').modal('open');
             }); 
