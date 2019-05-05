@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <header class="container pink lighten-4" style="padding:50px">
+            <h2 style="width:100%"><i class="fas fa-fire"></i> Friend Finder</h2>
+            <h5>Answer a few basic questions.</h5>
+            <h5>Then find the friend with the greatest compatibility!</h5>
+            <button id="survey" class="waves-effect waves-light btn-large pink">Go To Survey</button>
+    </header>
+    <footer class="container">
+        <a href="/api/friends" style="cursor:pointer"> API Friends List</a> | <a style="cursor:pointer" href="https://github.com/sabrina-li/FriendFinder">GitHub Repo</a>
+    </footer>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        document.querySelector('#survey').addEventListener("click", function() {
+            window.location.href='/survey';
+        })
+    </script>
+</body>
+</html>
