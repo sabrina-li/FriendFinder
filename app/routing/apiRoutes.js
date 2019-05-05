@@ -1,5 +1,6 @@
 const express = require('express');
-const friendsData = require("../data/friends.js") 
+const friends = require("../data/friends.js") 
+const friendsData = friends.friendsData;
 
 router = express.Router();
 router.get("/friends",(req,res)=>{    
@@ -15,7 +16,7 @@ router.post("/friends",(req,res,next)=>{
         }
     
     const match = matchNewFriend(newFriend);
-    friendsData.push(newFriend);
+    friends.pushtoData(newFriend);
     res.send(match);
 })
 
