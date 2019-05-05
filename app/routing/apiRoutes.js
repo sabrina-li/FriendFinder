@@ -10,7 +10,7 @@ router.post("/friends",(req,res,next)=>{
     const newFriend = {
             name: req.body.name,
             photo: req.body.photo,
-            scores: [req.body.group1,req.body.group2,req.body.group3,req.body.group4,req.body.group5,req.body.group6]
+            scores: [req.body.group1,req.body.group2,req.body.group3,req.body.group4,req.body.group5,req.body.group6,req.body.group7,req.body.group8,req.body.group9,req.body.group10]
         }
     
     const match = matchNewFriend(newFriend);
@@ -26,7 +26,7 @@ const matchNewFriend = (newFriend)=>{
     friendsData.forEach(friend=>{
         try{
             thisDiff = diff(newScores,friend.scores);
-            if(thisDiff<minTotalDiff){
+            if(thisDiff<=minTotalDiff){
                 minTotalDiff = thisDiff;
                 match = friend
             }
