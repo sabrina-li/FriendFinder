@@ -10,6 +10,7 @@ router.post("/friends",(req,res,next)=>{
     const newFriend = {
             name: req.body.name,
             photo: req.body.photo,
+            fb:req.body.fb,
             scores: [req.body.group1,req.body.group2,req.body.group3,req.body.group4,req.body.group5,req.body.group6,req.body.group7,req.body.group8,req.body.group9,req.body.group10]
         }
     
@@ -38,9 +39,12 @@ const matchNewFriend = (newFriend)=>{
 }
 const diff = (score1,score2)=>{
     let totalDiff=0;
+    
     if (score1.length !== score2.length) throw "length doesn't match!"
     for (var i=0;i<score1.length;i++){
-        totalDiff += Math.abs(score1[i]-score2[i]);
+        if(!isNaN(parseInt(score1[i]))&&!isNaN(parseInt(score2[i])))
+        //if can't parse int, skip this score
+            totalDiff += Math.abs(score1[i]-score2[i]);
     }
     return totalDiff;
 }
